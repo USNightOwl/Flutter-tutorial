@@ -12,6 +12,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'ToDoList',
+          style: TextStyle(fontSize: 40, color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
+      ),
+      body: Container(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.blue,
+        child: const Icon(
+          Icons.add,
+          size: 40,
+          color: Colors.white,
+        ),
+      ),
+    );
   }
 }
