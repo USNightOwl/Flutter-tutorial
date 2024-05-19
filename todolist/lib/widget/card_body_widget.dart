@@ -6,11 +6,13 @@ class CardBody extends StatelessWidget {
     super.key,
     required this.item,
     required this.handleDelete,
+    required this.index,
   });
 
   // ignore: prefer_typing_uninitialized_variables
   var item;
   final Function handleDelete;
+  int index;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,8 @@ class CardBody extends StatelessWidget {
       height: 74,
       margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
-        color: const Color(0xffdfdfdf),
+        color:
+            index % 2 == 0 ? const Color(0xffdfdfdf) : const Color(0xffedaaad),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
