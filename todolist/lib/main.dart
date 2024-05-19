@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: Container(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.blue,
@@ -29,6 +28,14 @@ class MyApp extends StatelessWidget {
           Icons.add,
           size: 40,
           color: Colors.white,
+        ),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: Column(
+          children: [
+            Container(width: double.infinity, height: 20, color: Colors.amber)
+          ],
         ),
       ),
     );
